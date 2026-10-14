@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Ngang</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #menu {
+            height: 50px;
+            border: 1px solid #333;
+            margin: 20px 0;
+            background-color: #222;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Các mục menu chính nằm ngang */
+        #menu > ul > li {
+            float: left;
+            position: relative;
+        }
+
+        #menu a {
+            display: block;
+            width: 140px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #222;
+        }
+
+        /* Đổi màu khi di chuột */
+        #menu a:hover {
+            background-color: red;
+        }
+
+        /* Định vị menu con */
+        #menu ul ul {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            visibility: hidden;
+            z-index: 100;
+        }
+
+        /* Hiển thị menu con khi di chuột vào mục cha */
+        #menu ul li:hover > ul {
+            visibility: visible;
+        }
+
+        .description {
+            color: #555;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Menu Dropdown Ngang</h1>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+
+            <li>
+                <a href="#products">Sản phẩm ▼</a>
+                <ul>
+                    <li><a href="#laptop">Laptop</a></li>
+                    <li><a href="#phone">Điện thoại</a></li>
+                    <li><a href="#tablet">Máy tính bảng</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#services">Dịch vụ ▼</a>
+                <ul>
+                    <li><a href="#repair">Sửa chữa</a></li>
+                    <li><a href="#warranty">Bảo hành</a></li>
+                    <li><a href="#support">Hỗ trợ</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <p class="description">
+        Di chuột vào mục Sản phẩm hoặc Dịch vụ để xem menu con.
+    </p>
+</body>
+</html>
