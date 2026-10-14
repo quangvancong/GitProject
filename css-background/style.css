@@ -1,0 +1,56 @@
+
+/* Màu nền của toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf2f8;
+    margin: 0;
+    padding: 30px;
+    color: #263238;
+}
+
+/* Căn giữa tiêu đề */
+h1 {
+    text-align: center;
+    color: #174a7e;
+}
+
+/* Định dạng đoạn mô tả */
+body > p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Khối có ảnh nền */
+.featured-box {
+    background-color: #34495e;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ), url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 300px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+
+    /* Căn giữa nội dung theo cả hai chiều */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    border-radius: 15px;
+}
+
+/* Khoảng cách giữa các dòng trong khối */
+.featured-box p {
+    line-height: 1.8;
+}
