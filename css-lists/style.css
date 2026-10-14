@@ -1,0 +1,110 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: #f4f7fb;
+    color: #263445;
+    line-height: 1.7;
+}
+
+h1 {
+    color: #174a73;
+    text-align: center;
+}
+
+section {
+    margin: 25px 0;
+    padding: 18px 22px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #dce5ed;
+}
+
+h2 {
+    color: #246a8d;
+    margin-top: 0;
+}
+
+/* 1. Dấu hình vuông */
+.subjects {
+    list-style-type: square;
+}
+
+/* 2. Số La Mã viết hoa */
+.learning-steps {
+    list-style-type: upper-roman;
+}
+
+/* 3. Dùng hình ảnh làm dấu đánh dấu.
+   Nếu ảnh không tải được, trình duyệt dùng hình vuông. */
+.tools {
+    list-style-type: square;
+    list-style-image: url("https://www.google.com/favicon.ico");
+}
+
+/* 4. So sánh outside và inside */
+.outside {
+    list-style-position: outside;
+    background-color: #edf5ff;
+    padding: 15px 15px 15px 40px;
+}
+
+.inside {
+    list-style-position: inside;
+    background-color: #edf5ff;
+    padding: 15px;
+}
+
+.outside li,
+.inside li {
+    margin-bottom: 12px;
+    max-width: 420px;
+}
+
+/* 5. Thuộc tính rút gọn list-style */
+.short-list {
+    list-style: circle inside;
+    background-color: #fff4e5;
+    padding: 15px 30px;
+}
+
+/* 6. Màu sắc và khoảng cách */
+.languages {
+    list-style-type: square;
+    background-color: #e1f5ec;
+    color: #176b48;
+    padding: 20px 45px;
+    border-radius: 6px;
+}
+
+.languages li {
+    margin: 8px 0;
+}
+
+/* 7. Bài tập tổng hợp */
+.roadmap {
+    list-style: upper-roman inside;
+    background-color: #e9e7ff;
+    color: #3e3487;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.roadmap li {
+    margin: 8px 0;
+    padding: 5px;
+    border-bottom: 1px solid #d4d0f4;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
