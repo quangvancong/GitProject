@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f3f6fa;
+    color: #333;
+}
+
+h1 {
+    color: #245783;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Đường viền và chiều rộng bảng */
+table {
+    width: 100%;
+    border: 1px solid #b8c7d5;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Định dạng tiêu đề và dữ liệu */
+th,
+td {
+    border: 1px solid #b8c7d5;
+    padding: 15px;
+    height: 35px;
+}
+
+/* Màu sắc hàng tiêu đề */
+th {
+    background-color: #245783;
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Căn chỉnh nội dung ô */
+td {
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Tô màu xen kẽ các hàng */
+tbody tr:nth-child(even) {
+    background-color: #edf3f8;
+}
+
+/* Đổi màu khi đưa chuột vào hàng */
+tbody tr:hover {
+    background-color: #d8eafa;
+}
+
+/* Giới hạn bảng trên màn hình nhỏ */
+.table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+}
