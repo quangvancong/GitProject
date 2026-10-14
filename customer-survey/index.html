@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: #f1f3f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .survey-container {
+            max-width: 760px;
+            margin: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .survey-header {
+            padding: 25px 30px;
+            background: #246a8d;
+            color: white;
+        }
+
+        .survey-header h1 {
+            margin: 0 0 8px;
+            font-size: 27px;
+        }
+
+        .survey-header p {
+            margin: 0;
+        }
+
+        form {
+            padding: 25px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label.question,
+        .question {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .required {
+            color: #d93025;
+        }
+
+        select,
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            font: inherit;
+        }
+
+        select {
+            background: white;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .options label {
+            display: block;
+            margin: 7px 0;
+            font-weight: normal;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .price-inputs {
+            display: flex;
+            gap: 15px;
+        }
+
+        .price-inputs div {
+            flex: 1;
+        }
+
+        .price-inputs label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .rating-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .rating-table th,
+        .rating-table td {
+            padding: 10px 6px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .rating-table th {
+            background: #eaf2f6;
+        }
+
+        .rating-table th:first-child,
+        .rating-table td:first-child {
+            text-align: left;
+        }
+
+        .rating-table input {
+            cursor: pointer;
+        }
+
+        .submit-button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            background: #246a8d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #194e69;
+        }
+
+        .note {
+            margin-top: 18px;
+            color: #666;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 20px 15px;
+            }
+
+            .survey-header {
+                padding: 22px 15px;
+            }
+
+            .survey-header h1 {
+                font-size: 23px;
+            }
+
+            .rating-table {
+                font-size: 11px;
+            }
+
+            .rating-table th,
+            .rating-table td {
+                padding: 7px 3px;
+                overflow-wrap: anywhere;
+            }
+
+            .price-inputs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="survey-container">
+        <header class="survey-header">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moments to complete this satisfaction survey.</p>
+        </header>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label class="question" for="age">
+                    What is your age range? <span class="required">*</span>
+                </label>
+                <select id="age" name="age" required>
+                    <option value="">Please Select</option>
+                    <option>Under 18</option>
+                    <option>18–24</option>
+                    <option>25–34</option>
+                    <option>35–44</option>
+                    <option>45–54</option>
+                    <option>55–64</option>
+                    <option>65 or older</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="question" for="income">
+                    What is your yearly income range? <span class="required">*</span>
+                </label>
+                <select id="income" name="income" required>
+                    <option value="">Please Select</option>
+                    <option>Under $25,000</option>
+                    <option>$25,000–$49,999</option>
+                    <option>$50,000–$74,999</option>
+                    <option>$75,000–$99,999</option>
+                    <option>$100,000 or more</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <span class="question">Gender Identity <span class="required">*</span></span>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Nonbinary"> Nonbinary</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span class="question">
+                    Which of the following products have you purchased in the last 2 months?
+                    Please check all that apply.
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="products[]" value="Product 1"> Product 1</label>
+                    <label><input type="checkbox" name="products[]" value="Product 2"> Product 2</label>
+                    <label><input type="checkbox" name="products[]" value="Product 3"> Product 3</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span class="question">How often would you use our new product?</span>
+                <div class="options">
+                    <label><input type="radio" name="frequency" value="Daily"> Daily</label>
+                    <label><input type="radio" name="frequency" value="Weekly"> Weekly</label>
+                    <label><input type="radio" name="frequency" value="Monthly"> Monthly</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span class="question">What would you pay for the new product?</span>
+                <div class="price-inputs">
+                    <div>
+                        <label for="dollars">Dollars ($)</label>
+                        <input type="number" id="dollars" name="dollars" min="0" placeholder="Dollars">
+                    </div>
+                    <div>
+                        <label for="cents">Cents</label>
+                        <input type="number" id="cents" name="cents" min="0" max="99" placeholder="Cents">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question" for="features">
+                    What features would you like to see in the new product?
+                </label>
+                <textarea id="features" name="features" placeholder="Enter your suggestions here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <span class="question">
+                    Please rate your level of agreement with the following statements.
+                </span>
+
+                <table class="rating-table">
+                    <thead>
+                        <tr>
+                            <th>Statement</th>
+                            <th>Strongly Disagree</th>
+                            <th>Disagree</th>
+                            <th>Agree</th>
+                            <th>Strongly Agree</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Our products are priced fairly.</td>
+                            <td><input type="radio" name="price_rating" value="1" aria-label="Price rating 1"></td>
+                            <td><input type="radio" name="price_rating" value="2" aria-label="Price rating 2"></td>
+                            <td><input type="radio" name="price_rating" value="3" aria-label="Price rating 3"></td>
+                            <td><input type="radio" name="price_rating" value="4" aria-label="Price rating 4"></td>
+                        </tr>
+                        <tr>
+                            <td>Our products are high quality.</td>
+                            <td><input type="radio" name="quality_rating" value="1" aria-label="Quality rating 1"></td>
+                            <td><input type="radio" name="quality_rating" value="2" aria-label="Quality rating 2"></td>
+                            <td><input type="radio" name="quality_rating" value="3" aria-label="Quality rating 3"></td>
+                            <td><input type="radio" name="quality_rating" value="4" aria-label="Quality rating 4"></td>
+                        </tr>
+                        <tr>
+                            <td>You would recommend our product to a friend or coworker.</td>
+                            <td><input type="radio" name="recommend_rating" value="1" aria-label="Recommendation rating 1"></td>
+                            <td><input type="radio" name="recommend_rating" value="2" aria-label="Recommendation rating 2"></td>
+                            <td><input type="radio" name="recommend_rating" value="3" aria-label="Recommendation rating 3"></td>
+                            <td><input type="radio" name="recommend_rating" value="4" aria-label="Recommendation rating 4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="submit-button" type="submit">Submit Survey</button>
+
+            <p class="note">Thank you for taking the time to complete this survey!</p>
+        </form>
+    </div>
+</body>
+</html>
