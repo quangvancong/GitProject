@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký người dùng</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #d0d7e2;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2457a7;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender-option {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 18px;
+            gap: 5px;
+        }
+
+        .gender-option label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2457a7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #173e7a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký người dùng</h2>
+
+        <form action="http://demo.codegym.vn/6/registration_form/register.php"
+              method="POST">
+
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Nhập họ và tên" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Nhập địa chỉ email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Nhập số điện thoại" required>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính:</label>
+
+                <div class="gender-option">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Nam</label>
+                </div>
+
+                <div class="gender-option">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </div>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+</body>
+</html>
