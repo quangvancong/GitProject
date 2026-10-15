@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.button {
+    @include m.button-style(v.$primary-color);
+    transition: background 0.3s;
+
+    &:hover {
+        background: darkred;
+    }
+}

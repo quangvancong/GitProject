@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as m;
+
+.card {
+    @include m.box-style;
+    margin: 20px 0;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
