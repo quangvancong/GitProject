@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse - Đánh thức tri thức</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --dark: #19352d;
+            --green: #315c49;
+            --cream: #f8f5ed;
+            --gold: #e5b96c;
+            --text: #526159;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 75px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: "Playfair Display", serif;
+        }
+
+        .navbar {
+            background: var(--cream);
+        }
+
+        .navbar-brand {
+            font-family: "Playfair Display", serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .nav-link {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: var(--green);
+        }
+
+        .btn-book {
+            background: var(--green);
+            color: white;
+            border: 1px solid var(--green);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .btn-book:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: var(--cream);
+            padding: 90px 0;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 5vw, 4.6rem);
+            line-height: 1.15;
+            margin: 20px 0;
+        }
+
+        .hero p, .section-description {
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .book-cover {
+            max-width: 340px;
+            margin: auto;
+            padding: 18px;
+            background: #fff;
+            box-shadow: 20px 25px 55px #19352d25;
+            transform: rotate(2deg);
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 410px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .section-padding {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        .author-section {
+            background: white;
+        }
+
+        .author-image {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .feature-card {
+            height: 100%;
+            padding: 30px 24px;
+            background: var(--cream);
+            border-radius: 12px;
+            transition: 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px #19352d12;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .pricing-section {
+            background: var(--cream);
+        }
+
+        .price-card {
+            height: 100%;
+            background: white;
+            border: 1px solid #e4e5dc;
+            border-radius: 12px;
+            padding: 32px 24px;
+        }
+
+        .price-card.featured {
+            background: var(--dark);
+            color: white;
+            border: 2px solid var(--gold);
+            transform: translateY(-8px);
+        }
+
+        .price {
+            font-family: "Playfair Display", serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+            line-height: 2.5;
+        }
+
+        .price-card li::before {
+            content: "✓ ";
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .price-card.featured li::before {
+            color: var(--gold);
+        }
+
+        .download-section {
+            background: var(--green);
+            color: white;
+        }
+
+        .download-section p {
+            color: #e0e9e2;
+        }
+
+        .btn-light-custom {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            background: var(--cream);
+            color: var(--dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .btn-light-custom:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        .review-card {
+            height: 100%;
+            padding: 28px;
+            background: var(--cream);
+            border-radius: 12px;
+        }
+
+        .stars {
+            color: #d49b36;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+
+        .review-card p {
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .site-footer {
+            background: var(--dark);
+            color: white;
+            padding: 35px 0;
+        }
+
+        .site-footer a {
+            color: #e0e9e2;
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 767.98px) {
+            .hero {
+                padding: 55px 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .book-cover {
+                max-width: 270px;
+                margin-top: 35px;
+            }
+
+            .book-cover img {
+                height: 330px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .price-card.featured {
+                transform: none;
+            }
+
+            .author-image {
+                width: 190px;
+                height: 190px;
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 1. HEADER -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container py-2">
+        <a class="navbar-brand" href="#home">BookVerse.</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Mở menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="#overview">Về sách</a></li>
+                <li class="nav-item"><a class="nav-link" href="#author">Tác giả</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Nội dung</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prices">Giá sách</a></li>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn-book" href="#download">Đọc thử miễn phí</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- 2. BOOK OVERVIEW -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" id="overview">
+                    <span class="eyebrow">Cuốn sách dành cho bạn</span>
+                    <h1>Đánh thức <span style="color:#47765d">tiềm năng</span> bên trong bạn.</h1>
+                    <p class="fs-5 mb-4">
+                        Một hành trình khám phá bản thân, xây dựng thói quen tích cực
+                        và phát triển tư duy để mỗi ngày đều trở nên ý nghĩa hơn.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#prices" class="btn-book">Khám phá sách →</a>
+                        <a href="#features" class="btn btn-outline-dark px-4 py-3">Xem nội dung</a>
+                    </div>
+                    <p class="mt-4 small">★ ★ ★ ★ ★ &nbsp; Được yêu thích bởi độc giả yêu tri thức</p>
+                </div>
+
+                <div class="col-lg-5 text-center">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=85"
+                             alt="Bìa sách minh họa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AUTHOR -->
+    <section class="section-padding author-section" id="author">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-md-4 text-center">
+                    <img class="author-image"
+                         src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85"
+                         alt="Chân dung tác giả minh họa">
+                </div>
+                <div class="col-md-7">
+                    <span class="eyebrow">Gặp gỡ người viết</span>
+                    <h2 class="section-title mt-3">Một câu chuyện, một hành trình.</h2>
+                    <p class="section-description">
+                        Tác giả Minh An là người yêu đọc sách và luôn tin rằng
+                        những thay đổi nhỏ có thể tạo nên khác biệt lớn.
+                        Cuốn sách này được viết từ những trải nghiệm, bài học
+                        và mong muốn chia sẻ kiến thức hữu ích đến mọi người.
+                    </p>
+                    <p class="section-description">
+                        “Hãy bắt đầu từ một trang sách, rồi bạn sẽ tìm thấy
+                        một góc nhìn mới cho chính mình.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURES -->
+    <section class="section-padding" id="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="eyebrow">Bên trong cuốn sách</span>
+                <h2 class="section-title mt-3">Những điều bạn sẽ khám phá</h2>
+                <p class="section-description">Kiến thức thiết thực, dễ hiểu và có thể áp dụng hằng ngày.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">📖</div>
+                        <h3>Tư duy tích cực</h3>
+                        <p>Học cách nhìn nhận thử thách từ nhiều góc độ và tìm cơ hội để trưởng thành.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Thói quen tốt</h3>
+                        <p>Xây dựng những hành động nhỏ, đều đặn để tiến gần hơn tới mục tiêu của bạn.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Phát triển bản thân</h3>
+                        <p>Hiểu rõ điểm mạnh, xác định hướng đi và chủ động tạo ra sự thay đổi.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PRICES -->
+    <section class="section-padding pricing-section" id="prices">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="eyebrow">Chọn phiên bản phù hợp</span>
+                <h2 class="section-title mt-3">Sách dành cho hành trình của bạn</h2>
+                <p class="section-description">Giá minh họa cho bài tập thực hành giao diện.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="price-card">
+                        <h3>Bản điện tử</h3>
+                        <p class="text-secondary">Đọc mọi lúc, mọi nơi</p>
+                        <div class="price">49.000đ</div>
+                        <ul>
+                            <li>File PDF minh họa</li>
+                            <li>Đọc trên nhiều thiết bị</li>
+                            <li>Cập nhật nội dung</li>
+                        </ul>
+                        <a href="#download" class="btn-book w-100 text-center">Chọn bản này</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="price-card featured">
+                        <span class="badge text-bg-warning mb-3">Được yêu thích</span>
+                        <h3>Bản đặc biệt</h3>
+                        <p class="opacity-75">Dành cho người yêu sách</p>
+                        <div class="price">129.000đ</div>
+                        <ul>
+                            <li>Sách bản in minh họa</li>
+                            <li>Tặng tài liệu ghi chú</li>
+                            <li>Thiết kế quà tặng</li>
+                        </ul>
+                        <a href="#download" class="btn-light-custom w-100 text-center">Chọn bản này</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="price-card">
+                        <h3>Bộ quà tặng</h3>
+                        <p class="text-secondary">Chia sẻ tri thức</p>
+                        <div class="price">199.000đ</div>
+                        <ul>
+                            <li>Hai cuốn sách minh họa</li>
+                            <li>Thiệp tặng sách</li>
+                            <li>Hộp quà đơn giản</li>
+                        </ul>
+                        <a href="#download" class="btn-book w-100 text-center">Chọn bản này</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DOWNLOAD -->
+    <section class="section-padding download-section" id="download">
+        <div class="container text-center">
+            <span class="eyebrow text-warning">Bắt đầu ngay hôm nay</span>
+            <h2 class="section-title mt-3">Đọc thử những trang đầu tiên</h2>
+            <p class="section-description mx-auto mb-4" style="max-width:650px">
+                Trải nghiệm nội dung mẫu trước khi lựa chọn phiên bản phù hợp.
+                Đây là nút minh họa cho bài tập; bạn có thể liên kết tới file PDF của mình sau.
+            </p>
+            <a class="btn-light-custom" href="#overview">Khám phá cuốn sách ↓</a>
+        </div>
+    </section>
+
+    <!-- 7. READER'S SAY -->
+    <section class="section-padding" id="reviews">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="eyebrow">Cảm nhận độc giả</span>
+                <h2 class="section-title mt-3">Bạn đọc nói gì?</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>“Cách trình bày dễ hiểu, giúp mình có thêm động lực để duy trì thói quen đọc sách mỗi ngày.”</p>
+                        <h4 class="h5 mb-1">Ngọc Anh</h4>
+                        <small class="text-secondary">Độc giả</small>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>“Nội dung gần gũi và có nhiều ý tưởng mà mình có thể áp dụng vào việc học tập.”</p>
+                        <h4 class="h5 mb-1">Minh Quân</h4>
+                        <small class="text-secondary">Sinh viên</small>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>“Một lựa chọn thú vị cho những ai muốn dành thời gian tìm hiểu và phát triển bản thân.”</p>
+                        <h4 class="h5 mb-1">Thu Hà</h4>
+                        <small class="text-secondary">Người yêu sách</small>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 8. FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row align-items-center gy-3">
+            <div class="col-md-6 text-center text-md-start">
+                <a class="navbar-brand text-white" href="#home">BookVerse.</a>
+                <p class="mb-0 mt-2 small">Lan tỏa tri thức, nuôi dưỡng ước mơ.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="#overview" class="me-3">Về sách</a>
+                <a href="#author" class="me-3">Tác giả</a>
+                <a href="#reviews">Đánh giá</a>
+                <p class="small mt-3 mb-0">© 2026 BookVerse. Bài tập thực hành Bootstrap.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
