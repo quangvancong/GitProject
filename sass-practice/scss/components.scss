@@ -1,0 +1,20 @@
+@use "variables" as v;
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: v.$primary-color;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.notice {
+    padding: 16px;
+    margin: 20px 0;
+    border-left: 4px solid v.$primary-color;
+    border-radius: 6px;
+    background: white;
+    color: v.$text-color;
+}

@@ -1,0 +1,136 @@
+@use "variables" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: v.$background-color;
+    color: v.$text-color;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: v.$secondary-color;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    ul {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #93c5fd;
+        }
+    }
+}
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+
+    h1 {
+        color: v.$primary-color;
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: v.$primary-color;
+        color: white;
+        padding: 12px 24px;
+        border-radius: v.$border-radius;
+        text-decoration: none;
+
+        &:hover {
+            background: #1d4ed8;
+        }
+    }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    h2 {
+        color: v.$secondary-color;
+        margin-bottom: 20px;
+    }
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 24px;
+    border-radius: v.$border-radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        color: v.$primary-color;
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    background: v.$secondary-color;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+
+        ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Practice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="logo" href="#">SASS Practice</a>
+
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Học SASS cùng thực hành</h1>
+        <p>Biến SCSS thành CSS bằng SASS CLI.</p>
+        <a href="#services" class="btn">Khám phá ngay</a>
+    </header>
+
+    <main class="container" id="services">
+        <h2>Các dịch vụ mẫu</h2>
+
+        <div class="notice">
+            Đây là ví dụ về việc kết hợp hai file CSS được biên dịch từ SCSS.
+        </div>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <span class="badge">01</span>
+                <h3>Thiết kế website</h3>
+                <p>Xây dựng giao diện rõ ràng, hiện đại và responsive.</p>
+            </article>
+
+            <article class="service-card">
+                <span class="badge">02</span>
+                <h3>Lập trình giao diện</h3>
+                <p>Thực hành HTML, CSS và các tính năng của SCSS.</p>
+            </article>
+
+            <article class="service-card">
+                <span class="badge">03</span>
+                <h3>Tối ưu giao diện</h3>
+                <p>Sử dụng biến, nesting và media query để tái sử dụng mã.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer" id="about">
+        <p>&copy; 2026 SASS Practice. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
