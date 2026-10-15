@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>My Website</h1>
+            <p>Thực hành xây dựng bố cục bằng CSS Flexbox</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#home">Trang chủ</a>
+            <a href="#content">Bài viết</a>
+            <a href="#sidebar">Tin tức</a>
+            <a href="#footer">Liên hệ</a>
+        </nav>
+
+        <!-- Main Content và Sidebar -->
+        <div class="main-container">
+
+            <main class="content" id="content">
+                <h2>Nội dung chính</h2>
+
+                <article class="article">
+                    <h3>CSS Flexbox là gì?</h3>
+                    <p>
+                        CSS Flexbox là một phương pháp bố trí các phần tử
+                        trên trang web theo hàng hoặc cột một cách linh hoạt.
+                    </p>
+                </article>
+
+                <article class="article">
+                    <h3>Ưu điểm của Flexbox</h3>
+                    <p>
+                        Flexbox giúp căn chỉnh, phân chia không gian và
+                        sắp xếp các phần tử dễ dàng trên nhiều kích thước
+                        màn hình khác nhau.
+                    </p>
+                </article>
+
+                <article class="article">
+                    <h3>Thiết kế Responsive</h3>
+                    <p>
+                        Kết hợp Flexbox với Media Queries để giao diện
+                        phù hợp với máy tính, máy tính bảng và điện thoại.
+                    </p>
+                </article>
+            </main>
+
+            <aside class="sidebar" id="sidebar">
+                <h2>Sidebar</h2>
+                <p>Khu vực hiển thị nội dung phụ.</p>
+
+                <ul>
+                    <li><a href="#content">Tin tức công nghệ</a></li>
+                    <li><a href="#content">Lập trình web</a></li>
+                    <li><a href="#content">Học CSS cơ bản</a></li>
+                    <li><a href="#content">Thủ thuật máy tính</a></li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <p>&copy; 2026 My Website | Thực hành CSS Flexbox</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+```
