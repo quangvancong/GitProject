@@ -1,0 +1,124 @@
+/* 1. RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #263238;
+    background-color: #f2f5f8;
+}
+
+/* 2. HEADER */
+.header {
+    padding: 45px 20px;
+    text-align: center;
+    color: white;
+    background-color: #24476b;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+}
+
+/* 3. NAVIGATION MENU */
+.navbar {
+    background-color: #18324d;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.navbar a {
+    display: block;
+    padding: 14px 24px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #13a89e;
+}
+
+/* 4. MAIN CONTENT */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.content-section,
+.sidebar {
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.content-section h2,
+.sidebar h2 {
+    margin-bottom: 15px;
+    color: #24476b;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e9ed;
+}
+
+/* 5. FOOTER */
+.footer {
+    padding: 22px;
+    text-align: center;
+    color: white;
+    background-color: #18324d;
+}
+
+/* 6. RESPONSIVE CHO ĐIỆN THOẠI */
+@media (max-width: 650px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        gap: 18px;
+    }
+}
