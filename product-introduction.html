@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iPhone - Khám phá sản phẩm</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #1d1d1f;
+            background-color: #fff;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.96);
+        }
+
+        .hero {
+            background: linear-gradient(180deg, #f5f5f7, #ffffff);
+        }
+
+        .hero-image {
+            max-height: 420px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 20px;
+            background-color: #f5f5f7;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .highlight-section {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .highlight-image {
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+        }
+
+        footer a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-brands fa-apple fs-3"></i>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Mở menu">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Tổng quan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Tính năng</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#design">Thiết kế</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Sản phẩm</a>
+                    </li>
+                </ul>
+
+                <a href="#products" class="btn btn-primary rounded-pill px-4">
+                    Khám phá ngay
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần giới thiệu chính -->
+    <header class="hero py-5" id="overview">
+        <div class="container py-lg-5">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6 text-center text-lg-start">
+
+                    <span class="badge rounded-pill text-bg-primary mb-3">
+                        Thế hệ mới
+                    </span>
+
+                    <h1 class="display-3 fw-bold">
+                        iPhone
+                    </h1>
+
+                    <h2 class="h3 fw-semibold mb-3">
+                        Công nghệ trong tầm tay.
+                    </h2>
+
+                    <p class="lead text-secondary mb-4">
+                        Khám phá thiết kế hiện đại, hiệu năng mạnh mẽ
+                        và những tính năng giúp trải nghiệm hằng ngày
+                        trở nên tuyệt vời hơn.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center
+                                justify-content-lg-start align-items-center gap-3">
+
+                        <a href="#products"
+                           class="btn btn-primary btn-lg rounded-pill px-4">
+                            Tìm hiểu thêm
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+
+                        <a href="#features"
+                           class="btn btn-outline-secondary btn-lg rounded-pill px-4">
+                            Xem tính năng
+                        </a>
+
+                    </div>
+
+                    <p class="small text-secondary mt-4">
+                        * Trang giới thiệu phục vụ mục đích học tập.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=85"
+                        alt="Điện thoại thông minh"
+                        class="hero-image">
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Thông tin nổi bật -->
+    <section class="container py-5" id="features">
+
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">
+                Mọi thứ bạn cần.
+            </h2>
+
+            <p class="text-secondary">
+                Những trải nghiệm nổi bật trong một thiết bị.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Tính năng 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card feature-card h-100 p-4">
+
+                    <div class="mb-3 text-primary">
+                        <i class="fa-solid fa-camera fa-2x"></i>
+                    </div>
+
+                    <h3 class="h5 fw-bold">Camera ấn tượng</h3>
+
+                    <p class="text-secondary mb-0">
+                        Ghi lại những khoảnh khắc đáng nhớ
+                        với hình ảnh rõ nét.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Tính năng 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card feature-card h-100 p-4">
+
+                    <div class="mb-3 text-primary">
+                        <i class="fa-solid fa-bolt fa-2x"></i>
+                    </div>
+
+                    <h3 class="h5 fw-bold">Hiệu năng mạnh</h3>
+
+                    <p class="text-secondary mb-0">
+                        Hỗ trợ học tập, làm việc và giải trí
+                        mượt mà.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Tính năng 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card feature-card h-100 p-4">
+
+                    <div class="mb-3 text-primary">
+                        <i class="fa-solid fa-display fa-2x"></i>
+                    </div>
+
+                    <h3 class="h5 fw-bold">Màn hình sống động</h3>
+
+                    <p class="text-secondary mb-0">
+                        Tận hưởng nội dung với màu sắc
+                        và hình ảnh nổi bật.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Tính năng 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card feature-card h-100 p-4">
+
+                    <div class="mb-3 text-primary">
+                        <i class="fa-solid fa-shield-halved fa-2x"></i>
+                    </div>
+
+                    <h3 class="h5 fw-bold">Bảo mật</h3>
+
+                    <p class="text-secondary mb-0">
+                        Các tính năng bảo mật giúp bảo vệ
+                        thông tin cá nhân.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Phần thiết kế -->
+    <section class="highlight-section py-5" id="design">
+        <div class="container py-lg-5">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6 order-2 order-lg-1 text-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85"
+                        alt="Thiết kế điện thoại thông minh"
+                        class="highlight-image">
+                </div>
+
+                <div class="col-lg-6 order-1 order-lg-2">
+
+                    <span class="text-info fw-semibold">
+                        THIẾT KẾ HIỆN ĐẠI
+                    </span>
+
+                    <h2 class="display-5 fw-bold my-3">
+                        Tinh tế trong từng chi tiết.
+                    </h2>
+
+                    <p class="text-white-50 lead">
+                        Sự kết hợp giữa kiểu dáng thanh lịch,
+                        giao diện trực quan và trải nghiệm
+                        sử dụng thuận tiện.
+                    </p>
+
+                    <div class="d-flex align-items-start gap-3 mt-4">
+
+                        <i class="fa-solid fa-check-circle text-info fs-4"></i>
+
+                        <div>
+                            <h3 class="h6 fw-bold">Kiểu dáng hiện đại</h3>
+                            <p class="text-white-50">
+                                Phù hợp với nhiều phong cách sử dụng.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3">
+
+                        <i class="fa-solid fa-check-circle text-info fs-4"></i>
+
+                        <div>
+                            <h3 class="h6 fw-bold">Trải nghiệm trực quan</h3>
+                            <p class="text-white-50">
+                                Các thao tác được trình bày rõ ràng,
+                                dễ tiếp cận.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Khu vực sản phẩm -->
+    <section class="container py-5" id="products">
+
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">
+                Khám phá dòng sản phẩm
+            </h2>
+
+            <p class="text-secondary">
+                Chọn thiết bị phù hợp với nhu cầu của bạn.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=80"
+                        class="product-image"
+                        alt="Điện thoại dòng tiêu chuẩn">
+
+                    <div class="card-body text-center">
+
+                        <h3 class="h4 fw-bold">
+                            iPhone tiêu chuẩn
+                        </h3>
+
+                        <p class="text-secondary">
+                            Phù hợp cho nhu cầu sử dụng hằng ngày.
+                        </p>
+
+                        <a href="#contact"
+                           class="btn btn-primary rounded-pill px-4">
+                            Tìm hiểu
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"
+                        class="product-image"
+                        alt="Điện thoại dòng cao cấp">
+
+                    <div class="card-body text-center">
+
+                        <h3 class="h4 fw-bold">
+                            iPhone cao cấp
+                        </h3>
+
+                        <p class="text-secondary">
+                            Dành cho người yêu thích trải nghiệm
+                            công nghệ nổi bật.
+                        </p>
+
+                        <a href="#contact"
+                           class="btn btn-primary rounded-pill px-4">
+                            Tìm hiểu
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Khu vực liên hệ -->
+    <section class="bg-light py-5" id="contact">
+        <div class="container text-center">
+
+            <h2 class="fw-bold">
+                Sẵn sàng khám phá?
+            </h2>
+
+            <p class="text-secondary mt-3">
+                Tìm hiểu thêm về sản phẩm và trải nghiệm
+                những công nghệ mới.
+            </p>
+
+            <a href="#overview"
+               class="btn btn-dark rounded-pill px-4 py-2 mt-2">
+                Quay lại đầu trang
+                <i class="fa-solid fa-arrow-up ms-2"></i>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container py-4">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between align-items-center gap-3">
+
+            <p class="small text-secondary mb-0">
+                © 2026 - Bài thực hành Thiết kế Trang Giới Thiệu Sản Phẩm.
+            </p>
+
+            <div class="d-flex gap-3">
+                <a href="#overview">Tổng quan</a>
+                <a href="#features">Tính năng</a>
+                <a href="#products">Sản phẩm</a>
+            </div>
+
+        </div>
+
+        <p class="small text-secondary mt-3 mb-0">
+            Đây là trang mô phỏng phục vụ học tập,
+            không phải trang bán hàng chính thức của Apple.
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
