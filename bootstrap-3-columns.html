@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Bootstrap Grid và Flexbox</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .column-box {
+            min-height: 150px;
+        }
+
+        .carousel img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bước 1: Bố cục 3 cột -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">
+            Bố cục 3 cột bằng Bootstrap Grid
+        </h2>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="column-box d-flex justify-content-center
+                            align-items-center bg-light p-3 rounded shadow-sm">
+                    <p class="mb-0">Phần 1</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="column-box d-flex justify-content-center
+                            align-items-center bg-secondary p-3
+                            text-white rounded shadow-sm">
+                    <p class="mb-0">Phần 2</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="column-box d-flex justify-content-center
+                            align-items-center bg-light p-3 rounded shadow-sm">
+                    <p class="mb-0">Phần 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bước 2: Margin và Padding -->
+    <section class="container my-5 py-3">
+        <h3 class="text-center">Khoảng cách Margin và Padding</h3>
+        <p class="text-center mt-3">
+            Bootstrap giúp điều chỉnh khoảng cách giữa các thành phần
+            một cách nhanh chóng.
+        </p>
+    </section>
+
+    <!-- Bước 3: Display Property -->
+    <section class="container">
+        <div class="d-none d-md-block bg-warning text-center p-3 rounded">
+            <p class="mb-0">
+                Nội dung này chỉ hiển thị trên màn hình từ 768px trở lên.
+            </p>
+        </div>
+
+        <div class="d-block d-md-none bg-info text-center p-3 rounded">
+            <p class="mb-0">
+                Bạn đang xem trên màn hình nhỏ.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bước 4: Carousel -->
+    <section class="container mt-5">
+        <h3 class="text-center mb-4">Image Carousel</h3>
+
+        <div id="myCarousel"
+             class="carousel slide"
+             data-bs-ride="carousel">
+
+            <div class="carousel-inner rounded">
+
+                <div class="carousel-item active">
+                    <img
+                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Không gian làm việc">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Không gian làm việc</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Lập trình máy tính">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Lập trình và công nghệ</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Học tập và làm việc nhóm">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Học tập và sáng tạo</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                      aria-hidden="true"></span>
+                <span class="visually-hidden">Ảnh trước</span>
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                      aria-hidden="true"></span>
+                <span class="visually-hidden">Ảnh tiếp theo</span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Bước 5: Font Awesome -->
+    <section class="container mt-5">
+        <h3 class="text-center">
+            <i class="fas fa-house text-primary"></i>
+            Trang chủ
+        </h3>
+
+        <p class="text-center mt-3">
+            Chào mừng bạn đến với bài thực hành Bootstrap.
+        </p>
+    </section>
+
+    <!-- Bước 6: Form liên hệ -->
+    <section class="container mt-5 mb-5">
+        <h3 class="text-center mb-4">Form liên hệ</h3>
+
+        <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Họ và tên</label>
+                <input type="text"
+                       class="form-control"
+                       id="name"
+                       placeholder="Nhập họ và tên"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       placeholder="Nhập email"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Nội dung</label>
+                <textarea class="form-control"
+                          id="message"
+                          rows="4"
+                          placeholder="Nhập nội dung"
+                          required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Gửi
+            </button>
+
+            <p id="formNotice" class="mt-3" role="status"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p class="mb-0">
+            Bài thực hành Bootstrap Grid và Flexbox
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript: cần thiết cho Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Minh họa sự kiện gửi form, không gửi dữ liệu lên máy chủ.
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            document.getElementById("formNotice").textContent =
+                "Form hợp lệ! Đây là bản thực hành, dữ liệu chưa được gửi lên máy chủ.";
+        });
+    </script>
+
+</body>
+</html>
