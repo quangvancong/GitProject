@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng ký tài khoản</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            background-color: #f1f5f9;
+        }
+
+        .register-card {
+            max-width: 1000px;
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .promo-carousel,
+        .promo-carousel .carousel-inner,
+        .promo-carousel .carousel-item {
+            height: 100%;
+            min-height: 570px;
+        }
+
+        .promo-carousel .carousel-item {
+            background-position: center;
+            background-size: cover;
+        }
+
+        .promo-overlay {
+            min-height: 570px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            color: white;
+            background: linear-gradient(
+                135deg,
+                rgba(13, 71, 161, 0.88),
+                rgba(25, 135, 84, 0.65)
+            );
+        }
+
+        .register-form {
+            padding: 3rem;
+        }
+
+        @media (max-width: 767.98px) {
+            .register-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .promo-carousel,
+            .promo-carousel .carousel-inner,
+            .promo-carousel .carousel-item,
+            .promo-overlay {
+                min-height: 350px;
+            }
+
+            .promo-overlay {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container py-5">
+
+        <div class="card register-card shadow-lg mx-auto">
+            <div class="row g-0">
+
+                <!-- Cột trái: Carousel quảng bá -->
+                <div class="col-md-6">
+
+                    <div
+                        id="benefitCarousel"
+                        class="carousel slide promo-carousel"
+                        data-bs-ride="carousel"
+                        data-bs-interval="4000">
+
+                        <div class="carousel-indicators">
+                            <button
+                                type="button"
+                                data-bs-target="#benefitCarousel"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-current="true"
+                                aria-label="Lợi ích 1">
+                            </button>
+
+                            <button
+                                type="button"
+                                data-bs-target="#benefitCarousel"
+                                data-bs-slide-to="1"
+                                aria-label="Lợi ích 2">
+                            </button>
+
+                            <button
+                                type="button"
+                                data-bs-target="#benefitCarousel"
+                                data-bs-slide-to="2"
+                                aria-label="Lợi ích 3">
+                            </button>
+                        </div>
+
+                        <div class="carousel-inner">
+
+                            <!-- Slide 1 -->
+                            <div
+                                class="carousel-item active"
+                                style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80');">
+
+                                <div class="promo-overlay">
+                                    <i class="fa-solid fa-users fa-3x mb-4"></i>
+
+                                    <h2 class="fw-bold">
+                                        Kết nối cộng đồng
+                                    </h2>
+
+                                    <p class="lead">
+                                        Tham gia cộng đồng để học hỏi,
+                                        chia sẻ và phát triển bản thân.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div
+                                class="carousel-item"
+                                style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80');">
+
+                                <div class="promo-overlay">
+                                    <i class="fa-solid fa-graduation-cap fa-3x mb-4"></i>
+
+                                    <h2 class="fw-bold">
+                                        Học tập không giới hạn
+                                    </h2>
+
+                                    <p class="lead">
+                                        Tiếp cận kiến thức và những cơ hội
+                                        học tập mới mỗi ngày.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div
+                                class="carousel-item"
+                                style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80');">
+
+                                <div class="promo-overlay">
+                                    <i class="fa-solid fa-rocket fa-3x mb-4"></i>
+
+                                    <h2 class="fw-bold">
+                                        Phát triển tương lai
+                                    </h2>
+
+                                    <p class="lead">
+                                        Bắt đầu hành trình của bạn
+                                        và khám phá những tiềm năng mới.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#benefitCarousel"
+                            data-bs-slide="prev">
+
+                            <span
+                                class="carousel-control-prev-icon"
+                                aria-hidden="true">
+                            </span>
+
+                            <span class="visually-hidden">
+                                Trang trước
+                            </span>
+                        </button>
+
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#benefitCarousel"
+                            data-bs-slide="next">
+
+                            <span
+                                class="carousel-control-next-icon"
+                                aria-hidden="true">
+                            </span>
+
+                            <span class="visually-hidden">
+                                Trang tiếp theo
+                            </span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Cột phải: Form đăng ký -->
+                <div class="col-md-6 bg-white">
+
+                    <div class="register-form">
+
+                        <div class="text-center mb-4">
+                            <div class="text-primary mb-3">
+                                <i class="fa-solid fa-user-plus fa-3x"></i>
+                            </div>
+
+                            <h2 class="fw-bold">
+                                Tạo tài khoản
+                            </h2>
+
+                            <p class="text-secondary">
+                                Đăng ký ngay để bắt đầu trải nghiệm!
+                            </p>
+                        </div>
+
+                        <form id="registerForm">
+
+                            <!-- Họ tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">
+                                    Họ và tên
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="Nhập họ và tên"
+                                        autocomplete="name"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Địa chỉ email
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="example@email.com"
+                                        autocomplete="email"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">
+                                    Mật khẩu
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Ít nhất 8 ký tự"
+                                        minlength="8"
+                                        autocomplete="new-password"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">
+                                    Xác nhận mật khẩu
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </span>
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Nhập lại mật khẩu"
+                                        minlength="8"
+                                        autocomplete="new-password"
+                                        required>
+                                </div>
+
+                                <div
+                                    id="passwordMessage"
+                                    class="form-text"
+                                    aria-live="polite">
+                                </div>
+                            </div>
+
+                            <!-- Đồng ý điều khoản -->
+                            <div class="form-check mb-4">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="terms"
+                                    required>
+
+                                <label class="form-check-label" for="terms">
+                                    Tôi đồng ý với các điều khoản sử dụng.
+                                </label>
+                            </div>
+
+                            <!-- Nút đăng ký -->
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100 py-2 fw-semibold">
+
+                                <i class="fa-solid fa-user-plus me-2"></i>
+                                Đăng ký ngay
+                            </button>
+
+                            <!-- Thông báo kết quả -->
+                            <div
+                                id="resultMessage"
+                                class="mt-3"
+                                role="status"
+                                aria-live="polite">
+                            </div>
+
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <p class="text-secondary mb-0">
+                                Đã có tài khoản?
+                                <a href="#" id="loginLink"
+                                   class="text-primary fw-semibold text-decoration-none">
+                                    Đăng nhập
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="text-center text-secondary mt-4">
+            &copy; 2026 - Trang đăng ký người dùng
+        </p>
+
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const registerForm = document.getElementById("registerForm");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const passwordMessage = document.getElementById("passwordMessage");
+        const resultMessage = document.getElementById("resultMessage");
+
+        // Kiểm tra hai mật khẩu có giống nhau không.
+        function checkPassword() {
+            if (confirmPassword.value === "") {
+                confirmPassword.setCustomValidity("");
+                passwordMessage.textContent = "";
+                passwordMessage.className = "form-text";
+                return;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity(
+                    "Mật khẩu xác nhận không khớp."
+                );
+
+                passwordMessage.textContent =
+                    "Mật khẩu xác nhận không khớp.";
+
+                passwordMessage.className = "form-text text-danger";
+            } else {
+                confirmPassword.setCustomValidity("");
+
+                passwordMessage.textContent =
+                    "Mật khẩu xác nhận khớp.";
+
+                passwordMessage.className = "form-text text-success";
+            }
+        }
+
+        password.addEventListener("input", checkPassword);
+        confirmPassword.addEventListener("input", checkPassword);
+
+        // Xử lý minh họa khi nhấn nút đăng ký.
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            checkPassword();
+
+            if (!registerForm.checkValidity()) {
+                registerForm.reportValidity();
+                return;
+            }
+
+            resultMessage.className = "alert alert-success mt-3";
+            resultMessage.textContent =
+                "Kiểm tra thành công! Đây là giao diện minh họa; tài khoản chưa được tạo trên máy chủ.";
+        });
+
+        // Chưa có chức năng đăng nhập trong bài thực hành.
+        document.getElementById("loginLink").addEventListener(
+            "click",
+            function (event) {
+                event.preventDefault();
+
+                resultMessage.className = "alert alert-info mt-3";
+                resultMessage.textContent =
+                    "Chức năng đăng nhập chưa được triển khai.";
+            }
+        );
+    </script>
+
+</body>
+</html>
