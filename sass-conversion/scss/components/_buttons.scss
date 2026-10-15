@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.button {
+    @include m.button-style(v.$primary-color);
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
