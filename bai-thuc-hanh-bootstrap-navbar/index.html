@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thực hành Bootstrap Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS tùy chỉnh -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .nav-link {
+            margin: 0 5px;
+        }
+
+        .hero {
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #555;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <!-- Tên website -->
+            <a class="navbar-brand" href="#home">
+                MyWebsite
+            </a>
+
+            <!-- Nút menu trên màn hình nhỏ -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Mở hoặc đóng menu điều hướng"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Các mục điều hướng -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <!-- Menu thả xuống -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="servicesDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Services
+                        </a>
+
+                        <ul class="dropdown-menu"
+                            aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#web-design">
+                                    Web Design
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#seo">
+                                    SEO
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Form tìm kiếm -->
+                <form class="d-flex" role="search"
+                      onsubmit="event.preventDefault(); alert('Bạn đã nhấn tìm kiếm!');">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Tìm kiếm..."
+                        aria-label="Tìm kiếm"
+                    >
+
+                    <button class="btn btn-outline-light"
+                            type="submit">
+                        Search
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nội dung trang -->
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to MyWebsite</h1>
+
+            <p>
+                Đây là trang web thực hành sử dụng Bootstrap Navbar.
+                Thanh điều hướng có menu chính, dropdown và giao diện
+                responsive trên điện thoại.
+            </p>
+
+            <a href="#about" class="btn btn-primary">
+                Tìm hiểu thêm
+            </a>
+        </section>
+
+        <section class="container py-4" id="about">
+            <h2>About</h2>
+            <p>
+                Phần này minh họa vị trí nội dung khi người dùng
+                nhấn vào mục About trên thanh điều hướng.
+            </p>
+        </section>
+
+        <section class="container py-4" id="web-design">
+            <h2>Web Design</h2>
+            <p>Dịch vụ thiết kế giao diện website.</p>
+        </section>
+
+        <section class="container py-4" id="seo">
+            <h2>SEO</h2>
+            <p>Dịch vụ tối ưu hóa công cụ tìm kiếm.</p>
+        </section>
+
+        <section class="container py-4" id="contact">
+            <h2>Contact</h2>
+            <p>Thông tin liên hệ của website.</p>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
