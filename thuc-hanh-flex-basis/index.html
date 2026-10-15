@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Basis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Thực hành CSS: flex-basis</h1>
+        <p>Tìm hiểu kích thước cơ sở của Flex Item</p>
+    </header>
+
+    <main class="page-content">
+
+        <!-- Ví dụ 1: flex-basis với px -->
+        <section class="demo">
+            <h2>1. Flex-basis với đơn vị px</h2>
+            <p>Ba phần tử có kích thước cơ sở lần lượt là 200px, 100px và 150px.</p>
+
+            <div class="container px-container">
+                <div class="item px-item item-200">Item 1<br>200px</div>
+                <div class="item px-item item-100">Item 2<br>100px</div>
+                <div class="item px-item item-150">Item 3<br>150px</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 2: auto, initial và inherit -->
+        <section class="demo">
+            <h2>2. Flex-basis với auto, initial và inherit</h2>
+
+            <h3>Giá trị auto</h3>
+            <p>Item sử dụng width: 180px làm kích thước cơ sở.</p>
+            <div class="container keyword-container">
+                <div class="item auto-item">flex-basis: auto</div>
+                <div class="item">Item thông thường</div>
+            </div>
+
+            <h3>Giá trị initial</h3>
+            <p>initial đưa flex-basis về giá trị mặc định là auto.</p>
+            <div class="container keyword-container">
+                <div class="item initial-item">flex-basis: initial</div>
+                <div class="item">Item thông thường</div>
+            </div>
+
+            <h3>Giá trị inherit</h3>
+            <p>Item con kế thừa giá trị flex-basis từ phần tử cha.</p>
+            <div class="inherit-parent">
+                <div class="item inherit-item">flex-basis: inherit</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 3: flex-basis với phần trăm -->
+        <section class="demo">
+            <h2>3. Flex-basis với đơn vị %</h2>
+            <p>Mỗi Item có kích thước cơ sở bằng 50% chiều rộng container.</p>
+
+            <div class="container percent-container">
+                <div class="item percent-item">Item 1 - 50%</div>
+                <div class="item percent-item">Item 2 - 50%</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 4: flex-direction column -->
+        <section class="demo">
+            <h2>4. Flex-basis với flex-direction: column</h2>
+            <p>flex-basis: 100px xác định kích thước cơ sở theo chiều dọc.</p>
+
+            <div class="container column-container">
+                <div class="item column-item">Item 1 - 100px</div>
+                <div class="item column-item">Item 2 - 100px</div>
+                <div class="item column-item">Item 3 - 100px</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 5: flex-basis kết hợp flex-grow -->
+        <section class="demo">
+            <h2>5. Kết hợp flex-basis với flex-grow</h2>
+            <p>
+                Cả ba Item có flex-basis: 100px.
+                Phần không gian còn lại được chia theo tỷ lệ 1 : 2 : 1.
+            </p>
+
+            <div class="container grow-container">
+                <div class="item grow-item grow-1">
+                    Item 1<br>grow: 1
+                </div>
+                <div class="item grow-item grow-2">
+                    Item 2<br>grow: 2
+                </div>
+                <div class="item grow-item grow-3">
+                    Item 3<br>grow: 1
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Bài thực hành CSS Flexbox - Thuộc tính flex-basis</p>
+    </footer>
+</body>
+</html>
