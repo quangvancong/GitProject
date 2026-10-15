@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.gridcontainer {
+  width: 100%;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+
+.gridcontent {
+  width: 8.333333%;
+  margin: 0;
+  border-right: 1px solid grey;
+  height: 100%;
+  float: left;
+  background-color: #f1f1f1;
+}
+.gridcontent:hover {
+  transition: background-color 0.3s;
+}
+
+/*# sourceMappingURL=main.css.map */

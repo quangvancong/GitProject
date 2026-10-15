@@ -1,0 +1,14 @@
+@use "variables" as v;
+
+@mixin grid-column(
+    $width: v.$grid-column-width,
+    $background: v.$grid-background,
+    $border-color: v.$grid-border-color
+) {
+    width: $width;
+    margin: 0;
+    border-right: 1px solid $border-color;
+    height: 100%;
+    float: left;
+    background-color: $background;
+}

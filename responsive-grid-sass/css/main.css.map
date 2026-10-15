@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/base/_global.scss","../scss/components/_grid.scss","../scss/abstracts/_variables.scss","../scss/abstracts/_mixins.scss"],"names":[],"mappings":"AAAA;EACI;;;AAGJ;EACI;EACA;;;ACHJ;EACI;;;AAGJ;EACI;EACA;EACA,QCVkB;;;ADatB;EENI,ODLgB;ECMhB;EACA;EACA;EACA;EACA,kBDPc;;ADWd;EACI","file":"main.css"}

@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.gridcontainer {
+    width: 100%;
+}
+
+.gridwrapper {
+    overflow: auto;
+    position: relative;
+    height: v.$grid-wrapper-height;
+}
+
+.gridcontent {
+    @include m.grid-column();
+
+    &:hover {
+        transition: background-color v.$grid-transition;
+    }
+}
