@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technology - Web Development</title>
+
+    <style>
+        /* ===== CÀI ĐẶT CHUNG ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ===== THANH ĐIỀU HƯỚNG ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px 8%;
+            background-color: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-list a {
+            color: white;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: #38bdf8;
+        }
+
+        /* ===== PHẦN GIỚI THIỆU ===== */
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 8%;
+            color: white;
+            background: linear-gradient(135deg, #0f172a, #075985);
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background-color: #38bdf8;
+            color: #082f49;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #7dd3fc;
+        }
+
+        /* ===== CÁC SECTION NỘI DUNG ===== */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            min-height: 350px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .section-left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            flex: 1;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .section p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+
+        .thumbnail {
+            flex: 0 1 40%;
+            text-align: center;
+        }
+
+        .thumbnail img {
+            display: block;
+            width: 100%;
+            max-width: 380px;
+            height: 240px;
+            object-fit: cover;
+            margin: auto;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ===== MÀU NỀN CÁC SECTION ===== */
+        .web-section {
+            background-color: #f0f9ff;
+        }
+
+        .c-section {
+            background-color: #f8fafc;
+        }
+
+        .java-section {
+            background-color: #fff7ed;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background-color: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* ===== THẺ KIẾN THỨC ===== */
+        .courses {
+            padding: 60px 8%;
+            background-color: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .courses h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .course-list {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .course-card {
+            flex: 1 1 250px;
+            max-width: 330px;
+            padding: 30px 25px;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            background-color: #1f2937;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .course-card h3 {
+            margin-bottom: 12px;
+            color: #38bdf8;
+        }
+
+        .course-card p {
+            color: #d1d5db;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 25px 15px;
+            background-color: #030712;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
+
+            .nav-list {
+                gap: 12px 20px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section,
+            .section-left {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 25px;
+                padding: 40px 7%;
+            }
+
+            .section h2 {
+                font-size: 26px;
+            }
+
+            .thumbnail {
+                flex-basis: auto;
+            }
+
+            .thumbnail img {
+                max-width: 100%;
+                height: 220px;
+            }
+
+            .courses h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            &lt;/TechWeb&gt;
+        </a>
+
+        <ul class="nav-list">
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#course">Courses</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- PHẦN GIỚI THIỆU CHÍNH -->
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Khám phá thế giới công nghệ</h1>
+
+            <p>
+                Học lập trình, phát triển tư duy và xây dựng
+                những sản phẩm công nghệ của riêng bạn.
+            </p>
+
+            <a href="#course" class="btn">
+                Khám phá khóa học
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- SECTION 1: WEB TECHNOLOGY -->
+    <section class="section web-section" id="web">
+
+        <div class="paras">
+
+            <span class="tag">01 - WEB DEVELOPMENT</span>
+
+            <h2>Web Technology</h2>
+
+            <p>
+                HTML là ngôn ngữ đánh dấu được sử dụng để xây dựng
+                cấu trúc cho các trang web. HTML giúp trình duyệt
+                xác định tiêu đề, đoạn văn, hình ảnh, liên kết
+                và nhiều thành phần khác.
+            </p>
+
+            <p>
+                CSS chịu trách nhiệm trình bày giao diện, màu sắc,
+                khoảng cách và bố cục. JavaScript bổ sung khả năng
+                tương tác, giúp trang web trở nên sinh động hơn.
+            </p>
+
+            <p>
+                Kết hợp HTML, CSS và JavaScript là bước khởi đầu
+                quan trọng để trở thành một nhà phát triển web.
+            </p>
+
+        </div>
+
+        <div class="thumbnail">
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Máy tính và công cụ lập trình web">
+        </div>
+
+    </section>
+
+    <!-- SECTION 2: C PROGRAMMING -->
+    <section class="section section-left c-section" id="program">
+
+        <div class="paras">
+
+            <span class="tag">02 - PROGRAMMING</span>
+
+            <h2>C Programming</h2>
+
+            <p>
+                C là ngôn ngữ lập trình thủ tục, được Dennis Ritchie
+                phát triển và có ảnh hưởng lớn đến nhiều ngôn ngữ
+                lập trình hiện đại.
+            </p>
+
+            <p>
+                Ngôn ngữ C giúp người học hiểu rõ biến, kiểu dữ liệu,
+                vòng lặp, hàm, con trỏ và cách quản lý bộ nhớ.
+                Đây cũng là nền tảng hữu ích khi tìm hiểu hệ điều hành
+                và các hệ thống phần mềm.
+            </p>
+
+            <p>
+                Học C giúp rèn luyện tư duy logic và kỹ năng
+                giải quyết vấn đề thông qua lập trình.
+            </p>
+
+        </div>
+
+        <div class="thumbnail">
+            <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+                alt="Mã nguồn lập trình trên màn hình">
+        </div>
+
+    </section>
+
+    <!-- SECTION 3: JAVA -->
+    <section class="section java-section" id="java">
+
+        <div class="paras">
+
+            <span class="tag">03 - OBJECT-ORIENTED PROGRAMMING</span>
+
+            <h2>Java Programming</h2>
+
+            <p>
+                Java là ngôn ngữ lập trình hướng đối tượng được
+                sử dụng trong nhiều lĩnh vực như ứng dụng doanh nghiệp,
+                hệ thống backend và phát triển phần mềm.
+            </p>
+
+            <p>
+                Mã nguồn Java thường được biên dịch thành bytecode
+                và thực thi trên Java Virtual Machine (JVM).
+                Cách tiếp cận này hỗ trợ khả năng chạy chương trình
+                trên nhiều nền tảng có JVM tương thích.
+            </p>
+
+            <p>
+                Java cung cấp các công cụ để làm việc với lớp,
+                đối tượng, kế thừa, xử lý ngoại lệ và bộ sưu tập dữ liệu.
+            </p>
+
+        </div>
+
+        <div class="thumbnail">
+            <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Không gian học tập và làm việc với công nghệ">
+        </div>
+
+    </section>
+
+    <!-- DANH SÁCH KHÓA HỌC -->
+    <section class="courses" id="course">
+
+        <h2>Các chủ đề nên khám phá</h2>
+
+        <div class="course-list">
+
+            <article class="course-card">
+
+                <h3>HTML & CSS</h3>
+
+                <p>
+                    Xây dựng cấu trúc, thiết kế giao diện
+                    và tạo bố cục responsive cho website.
+                </p>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>C Programming</h3>
+
+                <p>
+                    Rèn luyện tư duy thuật toán,
+                    cấu trúc dữ liệu và kỹ năng lập trình cơ bản.
+                </p>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Java</h3>
+
+                <p>
+                    Tìm hiểu lập trình hướng đối tượng
+                    và phát triển ứng dụng bằng Java.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p><strong>&lt;/TechWeb&gt;</strong></p>
+
+        <p>
+            Trang web thực hành HTML và CSS
+        </p>
+
+        <p>
+            Copyright &copy; 2026 - All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
